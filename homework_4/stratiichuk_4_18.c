@@ -18,4 +18,4 @@ int main(){
 
     double result=power/factorial;
     printf("Result: %lf\n", result);
-}ye
+}
