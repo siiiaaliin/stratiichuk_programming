@@ -129,10 +129,10 @@ void task7(){
     double a, b, c;
     printf("Enter a, b, c: ");
     scanf("%lf %lf %lf", &a, &b, &c);
-    if (a==0){
+    if (fabs(a)<0.000001){
         printf("Not a quadratic equation\n");
-        if (b==0){
-            if (c==0){
+        if (fabs(b)<0.000001){
+            if (fabs(c)<0.000001){
                 printf("Infinite solutions\n");
             }
             else{
@@ -147,13 +147,13 @@ void task7(){
         return;
     }
     double D=b*b-4*a*c;
-    if (D>0){
+    if (D>0.000001){
         double x1=(-b+sqrt(D))/(2*a);
         double x2=(-b-sqrt(D))/(2*a);
         printf("Two roots\n");
         printf("x1=%lf, x2=%lf", x1, x2);
     }
-    else if (D==0){
+    else if (fabs(D)<0.000001){
         double x=-b/(2*a);
         printf("One root\n");
         printf("x=%lf", x);
